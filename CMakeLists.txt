@@ -21,3 +21,7 @@ if(NOT CLANG_FORMAT_BIN_NAME-NOTFOUND)
 endif()
 
 set(CMAKE_CXX_STANDARD 11)
+
+set(REG_SRC ASTNode.cc)
+
+add_library(Reg STATIC ${REG_SRC})
