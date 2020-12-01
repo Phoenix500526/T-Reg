@@ -176,6 +176,23 @@ std::unique_ptr<RangeNode> ASTBuilder::_ProcessRange(const char* regex,
   return std::move(ptr);
 }
 
+bool ASTBuilder::_AddEndNode() {
+  if (ast_.size() != 1) return false;
+
+  auto leftnode = std::move(ast_.top());
+  ast_.pop();
+
+  std::unique_ptr<CharNode> endnode(new CharNode(ASTNode::kEnd));
+
+  std::unique_ptr<ConcatNode> root(new ConcatNode);
+  root->AddNode(std::move(leftnode));
+  root->AddNode(std::move(endnode));
+
+  ast_.push(std::move(root));
+
+  return true;
+}
+
 ASTBuilder::PriorityLevel ASTBuilder::_Priority(int ch) const {
   switch (ch) {
     case kPlus:
