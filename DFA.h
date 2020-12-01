@@ -14,7 +14,7 @@ struct Input;
 
 class DFA {
  public:
-  ~DFA() = default;
+  ~DFA();
   bool Match(const std::string& pattern) const;
   bool Match(const char* pattern) const;
   bool Match(const char* pattern, std::size_t len) const;

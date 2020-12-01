@@ -10,6 +10,8 @@
 namespace treg {
 namespace detail {
 
+DFA::~DFA() = default;
+
 DFA::State::State(int id) : id(id), isFinal(false) {}
 
 std::string DFA::State::DebugString() const {
