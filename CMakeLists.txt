@@ -22,6 +22,8 @@ endif()
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(REG_SRC ASTNode.cc)
+set(REG_SRC 
+    ASTNode.cc
+    ASTBuilder.cc)
 
 add_library(Reg STATIC ${REG_SRC})
