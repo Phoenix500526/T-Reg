@@ -67,7 +67,7 @@ void ASTNode::AddFollowPos(const ASTNode::PositionNodes& follows) const {
 }
 
 // CharNode
-CharNode::CharNode(int c) : char_(false) {}
+CharNode::CharNode(int c) : char_(c) {}
 
 void CharNode::Print(int indent) const {
   for (int i = 0; i < indent; ++i) {
