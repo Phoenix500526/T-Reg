@@ -173,7 +173,7 @@ std::unique_ptr<RangeNode> ASTBuilder::_ProcessRange(const char* regex,
     ++pOff_;
   }
 
-  return std::move(ptr);
+  return ptr;
 }
 
 bool ASTBuilder::_AddEndNode() {

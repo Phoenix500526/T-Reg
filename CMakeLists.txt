@@ -22,6 +22,15 @@ endif()
 
 set(CMAKE_CXX_STANDARD 11)
 
+add_compile_options(
+ -Wall
+ -Wno-unused-parameter
+ -Woverloaded-virtual
+ -Wpointer-arith
+ -Wwrite-strings
+ -O3
+ )
+
 set(REG_SRC 
     ASTNode.cc
     ASTBuilder.cc
