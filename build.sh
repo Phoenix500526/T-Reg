@@ -15,6 +15,7 @@ conan install .. --build missing    \
 cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_CXX_COMPILER=clang++ 
 make clang-format
 make $*
+make test
 
 # Use the following command to run all the unit tests
 # at the dir $BUILD_DIR/$BUILD_TYPE :
