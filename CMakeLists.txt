@@ -25,6 +25,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(REG_SRC 
     ASTNode.cc
     ASTBuilder.cc
-    DFA.cc)
+    DFA.cc
+    Regex.cc)
 
 add_library(Reg STATIC ${REG_SRC})
+
+add_subdirectory(tests)

@@ -26,7 +26,7 @@ bool Input::IsAny() const {
   if (exclude_ || !ranges_.empty()) {
     return false;
   }
-  return 1 == chars_.size() && ASTNode::kEnd == *chars_.begin();
+  return 1 == chars_.size() && ASTNode::kAny == *chars_.begin();
 }
 
 bool Input::Accept(int ch) const {
